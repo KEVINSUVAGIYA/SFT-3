@@ -1,12 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCDaINeIHpJuwjDf_5-XzS2I5HLqdwhA7I",
-    authDomain: "dataform-c887b.firebaseapp.com",
-    databaseURL: "https://dataform-c887b-default-rtdb.firebaseio.com",
-    projectId: "dataform-c887b",
-    storageBucket: "dataform-c887b.appspot.com",
-    messagingSenderId: "654164159720",
-    appId: "1:654164159720:web:ed648eff1fcbc13d8fad5d",
-    measurementId: "G-2ZQM91L04T"
+    // Your API Comes here
 };
 
 // initialize firebase
