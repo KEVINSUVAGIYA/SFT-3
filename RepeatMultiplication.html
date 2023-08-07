@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication until 1 digit</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button type="button" onclick="FindOneDigitMultiplication()">Find</button>
+    <p id="ans">Output will show here.</p>
+
+    <script>
+
+        function FindOneDigitMultiplication(){
+            var number = document.getElementById("number").value;
+            var digits = number.split(" ");
+            var total = sum(digits);
+            var mult = multi(String(total));
+            console.log(total +" " +  mult);
+
+            var ans = mult;
+            console.log(ans);
+            
+            while(String(ans).length !=1){
+                ans = lengthcheck(String(ans));
+            }
+            if(String(ans).length==1 ){
+                console.log("going in..");
+                document.getElementById("ans").innerHTML = ans;
+            }
+            else{
+            }
+        }
+
+        function lengthcheck(str){
+            //console.log()
+            if (str.length==1){
+                return 1;
+            }else{
+                return multi(String(str));
+            }
+        }
+
+        function sum(arr){
+            var summ = 0;
+            for (let i=0; i<arr.length ; i++){
+                summ += parseInt(arr[i]);
+            }
+            return summ;
+        }
+        function multi(str){
+            var m = 1;
+            console.log(m + " "+str.length)
+            for (let i = 0; i < str.length; i++) {
+                m *= parseInt(str[i]);
+                //console.log(parseInt(str[i]))
+            }
+            return m;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <form>
+        <input id="string" type="text" placeholder="Enter your String" required>
+        <button type="button" onclick="finding()">Submit</button>
+        <p id="ans"></p>
+    </form>
+    <script>
+        function finding() {
+                var given_String = document.getElementById("string").value;
+                var count =0;
+                //alert ((given_String.match(/ee/g) || []).length);
+                for(let i=0;i<given_String.length-1;i++){
+                    if(given_String.charAt(i) =="e" && given_String.charAt(i+1)=="e"){
+                        count++;
+                    }
+                }
+                alert((count!=0)?("True,Count of 'ee' is: " +count):("False"));
+        }
+    </script>
+</body>
+
+</html>

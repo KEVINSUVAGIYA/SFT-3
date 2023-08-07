@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="database.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Form</h1>
+        <form method="post" id="Dataform">
+            <div class="row">
+                <p>
+                    <label>First Name*</label>
+                    <input type="text" id="fname" required>
+                </p>
+                <p>
+                    <label>last Name</label>
+                    <input type="text" id="lname">
+                </p>
+            </div>
+            <div class="row">
+                <p>
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <label for="password">Password*</label>
+                    <input type="text" name="password" id="password" required>
+                </p>
+            </div>
+            <p>
+                <button type="submit" name="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="Database.js"></script>
+</body>
+</html>

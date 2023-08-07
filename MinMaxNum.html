@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max and Min Number</title>
+</head>
+<body>
+    <input type="text" id="num">
+    <button type="button" onclick="findMinMax()">Find</button>
+    <p id="ans">You output WIll Show Here.</p>
+
+    <script>
+        function findMinMax(){
+            var num = document.getElementById("num").value;
+            var num = num.split(" ");
+            var max = num[0], min =num[0];
+            for (let i = 0; i < num.length; i++) {
+                if(max < num[i]){
+                    max = num[i];
+                }
+                if(min > num[i]){
+                    min = num[i];
+                }
+            }
+
+            document.getElementById("ans").innerHTML = "Max Number is: "+max+" and Min Number is: "+min;
+        }
+    </script>
+</body>
+</html>

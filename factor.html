@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factor</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <button type="button" onclick="factor()">Factors</button>
+    <p id="ans">Factors Will Show up Here!</p>
+
+    <script>
+        function factor(){
+            var num = document.getElementById("num").value;
+            var ans = [];
+            for(let i=0;i<num;i++){
+                if(num%i==0){
+                    ans.push(i);
+                }
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</body>
+</html>

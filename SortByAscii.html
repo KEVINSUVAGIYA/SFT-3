@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort By Ascii</title>
+</head>
+
+<body>
+    <input type="text" id="string">
+    <button type="button" onclick="SortByCase()">Sort By Ascii</button>
+    <p id="ans"></p>
+
+    <script>
+        function SortByCase() {
+            var str = document.getElementById("string").value;
+            var ascii = [];
+            for (let i=0;i<str.length;i++){
+                ascii.push(str.charCodeAt(i));
+            }
+            //console.log(ascii);
+            function sort(ary) {
+                alert(ary.sort(function (a, b) {
+                    return a - b;
+                }));
+            }
+            sort(ascii);
+            var answer = decimalToText(ascii);
+            //console.log(answer);
+            document.getElementById("ans").innerHTML = answer;
+        }
+        function decimalToText(unicodeArray) {
+            return String.fromCharCode(...unicodeArray);
+        }
+    </script>
+</body>
+
+</html>

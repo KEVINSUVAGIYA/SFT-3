@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Zero</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button type="button" onclick="RemoveLeadingTrailingZero()">Remove Zero</button>
+    <p id="ans"></p>
+
+    <script>
+        function RemoveLeadingTrailingZero(){
+            var num = document.getElementById("number").value;
+            var answer ="";
+            // for(let i=0;i<num.length;i++){
+            //    if(num.charAt(i)!="0"){
+            //        answer = answer + num.charAt(i);
+            //    }else{
+            //        console.log(answer);
+            //        break;
+            //    }
+            //}
+            document.getElementById("ans").innerHTML = parseInt(num);
+        }
+    </script>
+</body>
+</html>

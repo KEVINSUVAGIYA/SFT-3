@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort By Ascii</title>
+</head>
+
+<body>
+    <input type="text" id="string">
+    <button type="button" onclick="SortByCase()">Sort By Ascii</button>
+    <p id="ans"></p>
+
+    <script>
+        function SortByCase() {
+            var str = document.getElementById("string").value;
+            var ans = "";
+            for (let i = 0; i < str.length; i++) {
+                if(str.charCodeAt(i)&1){
+                    ans = ans + str.charAt(i).toLowerCase();
+                }
+                else{
+                    ans = ans + str.charAt(i);
+                }
+            }
+
+            document.getElementById("ans").innerHTML = ans;
+
+        }
+    </script>
+</body>
+
+</html>

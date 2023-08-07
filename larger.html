@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=q">
+    <title>Larger !</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <button type="button" onclick="large()">Smaller Or Not</button>
+    <p id="ans"></p>
+    <script>
+        function large(){
+            var num = document.getElementById("num").value;
+            var answer ;
+            (num.charAt(0)<num.charAt(1))? answer= "True" : answer= "false";
+            document.getElementById("ans").innerHTML = answer;
+        }
+    </script>
+</body>
+</html>
